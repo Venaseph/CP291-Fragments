@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cpera.storefront.MainActivity">
+
+    <ImageView
+        android:id="@+id/imvCube"
+        android:layout_width="90dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cube" />
+
+    <TextView
+        android:id="@+id/cTitle"
+        android:layout_width="267dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/cube"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imvCube"
+        app:layout_constraintTop_toTopOf="@+id/imvCube" />
+
+    <TextView
+        android:id="@+id/cDesc"
+        android:layout_width="267dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/cubeDesc"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imvCube"
+        app:layout_constraintTop_toBottomOf="@+id/cTitle" />
+
+    <TextView
+        android:id="@+id/cFlav"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/cubeFlavor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/imvCube"
+        app:layout_constraintTop_toBottomOf="@+id/cDesc" />
+
+    <RatingBar
+        android:id="@+id/cubeStar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/starColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imvCube"
+        app:layout_constraintStart_toEndOf="@+id/imvCube"
+        app:layout_constraintTop_toBottomOf="@+id/cFlav" />
+
+    <ImageView
+        android:id="@+id/imvCand"
+        android:layout_width="90dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvCube"
+        app:srcCompat="@drawable/candleshot" />
+
+    <ImageView
+        android:id="@+id/imvCall"
+        android:layout_width="90dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvCand"
+        app:srcCompat="@drawable/calltoarms" />
+
+    <ImageView
+        android:id="@+id/ameth"
+        android:layout_width="90dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvCall"
+        app:srcCompat="@drawable/aspellstone" />
+
+    <TextView
+        android:id="@+id/candTitle"
+        android:layout_width="267dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/candle"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imvCand"
+        app:layout_constraintTop_toTopOf="@+id/imvCand" />
+
+    <TextView
+        android:id="@+id/candDesc"
+        android:layout_width="267dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/candFlavor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imvCand"
+        app:layout_constraintTop_toBottomOf="@+id/candTitle" />
+
+    <TextView
+        android:id="@+id/candFlav"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/candFlavor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/imvCand"
+        app:layout_constraintTop_toBottomOf="@+id/candDesc" />
+
+    <RatingBar
+        android:id="@+id/candStar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/starColor"
+        app:layout_constraintStart_toEndOf="@+id/imvCand"
+        app:layout_constraintTop_toBottomOf="@+id/candFlav" />
+
+    <TextView
+        android:id="@+id/callTitle"
+        android:layout_width="267dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/call"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imvCall"
+        app:layout_constraintTop_toTopOf="@+id/imvCall" />
+
+    <TextView
+        android:id="@+id/callDesc"
+        android:layout_width="267dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/callDesc"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imvCall"
+        app:layout_constraintTop_toBottomOf="@+id/callTitle" />
+
+    <TextView
+        android:id="@+id/callFlav"
+        android:layout_width="267dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/callFlavor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/imvCall"
+        app:layout_constraintTop_toBottomOf="@+id/callDesc" />
+
+    <RatingBar
+        android:id="@+id/callStar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/starColor"
+        app:layout_constraintStart_toEndOf="@+id/imvCall"
+        app:layout_constraintTop_toBottomOf="@+id/callFlav" />
+
+    <ImageView
+        android:id="@+id/cDust"
+        android:layout_width="23dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/cubeStar"
+        app:layout_constraintTop_toTopOf="@+id/cubeStar"
+        app:srcCompat="@drawable/dust" />
+
+    <TextView
+        android:id="@+id/cCost"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="400"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/cDust"
+        app:layout_constraintTop_toTopOf="@+id/cDust" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="23dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/candStar"
+        app:layout_constraintTop_toBottomOf="@+id/candFlav"
+        app:srcCompat="@drawable/dust" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="20"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="1600"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="23dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/callStar"
+        app:layout_constraintTop_toBottomOf="@+id/callFlav"
+        app:srcCompat="@drawable/dust" />
+
+    <TextView
+        android:id="@+id/amTitle"
+        android:layout_width="267dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/amethyst"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ameth"
+        app:layout_constraintTop_toTopOf="@+id/ameth" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/amFlavor"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/ameth"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="267dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/amDesc"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ameth"
+        app:layout_constraintTop_toBottomOf="@+id/amTitle" />
+
+    <RatingBar
+        android:id="@+id/amethStar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/starColor"
+        app:layout_constraintStart_toEndOf="@+id/ameth"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="23dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/amethStar"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:srcCompat="@drawable/dust" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="34dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="200"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+
+</android.support.constraint.ConstraintLayout>

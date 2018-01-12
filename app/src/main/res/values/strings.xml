@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HearthMarket</string>
+    <string name="cube">Carnivorous Cube</string>
+    <string name="cubeDesc">Battlecry: Destroy a friendly minion. Deathrattle: Summon 2 copies of it.</string>
+    <string name="cubeFlavor">"He\'s always grumpy until he\'s eaten his first barista of the morning."</string>
+    <string name="candle">Candleshot</string>
+    <string name="candDesc">Immune while attacking</string>
+    <string name="candFlavor">"Once called Cahn\'delar, Shortbow of the Ancient Whisker."</string>
+    <string name="call">Call To Arms</string>
+    <string name="callDesc">Recruit 3 minions that cost(2) or less</string>
+    <string name="callFlavor">"More personal than a text to arms."</string>
+    <string name="amethyst">Amethyst Spellstone</string>
+    <string name="amDesc">Deal 5 damage to a minion. (Take damage from your cards to upgrade.)</string>
+    <string name="amFlavor">"So stoned, he hurt himself in the process"</string>
+    <string name="back">Back</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
