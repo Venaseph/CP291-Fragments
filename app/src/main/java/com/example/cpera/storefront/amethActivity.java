@@ -13,6 +13,7 @@ public class amethActivity extends AppCompatActivity {
     private SharedPreferences.Editor edit;
     private RatingBar amethStar;
     private Intent intent;
+    private BackFragment frag;
     private float stars;
 
     @Override
@@ -35,7 +36,6 @@ public class amethActivity extends AppCompatActivity {
                 sharedPref.edit().putFloat("amethStar", stars).apply();
             }
         });
-
     }
 
 }

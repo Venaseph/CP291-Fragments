@@ -4,13 +4,19 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.Toast;
+
+import static android.util.Log.i;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -19,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView cube, cand, call, ameth;
     private SharedPreferences sharedPref;
     private SharedPreferences.Editor edit;
+    private Button sendEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         candStar = findViewById(R.id.candStar);
         callStar = findViewById(R.id.callStar);
         amethStar = findViewById(R.id.amethStar);
+        sendEmail = findViewById(R.id.emailButton);
+
 
         //version checker runs first
         checkVersion();
@@ -41,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Implement onClick listeners for IMGs
         onImgClick();
+
 
     }
 
@@ -74,11 +84,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             call.setOnClickListener(this);
         ameth = findViewById(R.id.ameth);
             ameth.setOnClickListener(this);
+        sendEmail.findViewById(R.id.emailButton);
+            sendEmail.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.imvCube) {
+
+        if (v.getId() == R.id.emailButton) {
+            sendEmail();
+            return;
+        } else if (v.getId() == R.id.imvCube) {
             intent = new Intent(getApplicationContext(), cubeActivity.class);;
         } else if (v.getId() == R.id.imvCand) {
             intent = new Intent(getApplicationContext(), candleActivity.class);
@@ -96,6 +112,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         candStar.setRating(sharedPref.getFloat("candStar", 0));
         callStar.setRating(sharedPref.getFloat("callStar", 0));
         amethStar.setRating(sharedPref.getFloat("amethStar", 0));
+    }
+
+    private void sendEmail() {
+        //some logging in case
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.setData(Uri.parse("mailto:")).setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"cperagine@gmail.com"});
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Hey hearthmarket!");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Your message could be autofilled here");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "send"));
+            finish();
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(MainActivity.this, "No Client found", Toast.LENGTH_LONG).show();
+        }
+
+
     }
 
     @Override
